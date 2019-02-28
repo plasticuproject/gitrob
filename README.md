@@ -1,3 +1,12 @@
+#### CHANGES FROM ORIGINAL
+
+Added `-include-branches` switch to scan all repository branches <br />
+Added `codeship.aes` signature to signatures.go:  Credit @dcepler <br />
+Added bug fix where Gitrob was not logging files from initial commits:  Credit @micksmix <br />
+<br />
+<br />
+
+
 <p align="center">
   <img src="https://github.com/michenriksen/gitrob/raw/master/static/images/gopher_full.png" alt="Gitrob" width="200" />
 </p>
