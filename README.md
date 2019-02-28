@@ -3,6 +3,7 @@
 Added `-include-branches` switch to scan all repository branches <br />
 Added `codeship.aes` signature to signatures.go:  Credit @dcepler <br />
 Added bug fix where Gitrob was not logging files from initial commits:  Credit @micksmix <br />
+Added `include-forks` switchs to include repositories that orignate as forks:  Credit @dcepler <br />
 <br />
 <br />
 
@@ -33,6 +34,8 @@ Gitrob is a tool to help find potentially sensitive files pushed to public repos
     Print debugging information
 -github-access-token string
     GitHub access token to use for API requests
+-include-forks
+    Include forked repositories in scan
 -include-branches
     Include repository branches in scan
 -load string

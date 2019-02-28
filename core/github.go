@@ -54,7 +54,7 @@ func GetUserOrOrganization(login string, client *github.Client) (*GithubOwner, e
 	}, nil
 }
 
-func GetRepositoriesFromOwner(login *string, client *github.Client, includeBranches *bool) ([]*GithubRepository, error) {
+func GetRepositoriesFromOwner(login *string, client *github.Client, includeBranches *bool, includeForks *bool) ([]*GithubRepository, error) {
 	var allRepos []*GithubRepository
 	loginVal := *login
 	ctx := context.Background()
@@ -68,7 +68,7 @@ func GetRepositoriesFromOwner(login *string, client *github.Client, includeBranc
 			return allRepos, err
 		}
 		for _, repo := range repos {
-			if !*repo.Fork {
+			if (*includeForks && *repo.Fork) || !*repo.Fork {
 				t := GithubRepository{
 					Owner:         repo.Owner.Login,
 					ID:            repo.ID,
