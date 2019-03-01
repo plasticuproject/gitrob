@@ -1,3 +1,6 @@
+##### TO DO:
+Edit the installation instructions. The method below will not work for this fork. Right now you must clone this repository into `github.com/michenriksen/` in your Go PATH
+
 #### CHANGES FROM ORIGINAL
 
 Added `-include-branches` switch to scan all repository branches <br />
