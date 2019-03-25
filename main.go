@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/michenriksen/gitrob/core"
+	"github.com/plasticuproject/gitrob/core"
 )
 
 var (
@@ -62,7 +62,7 @@ func GatherRepositories(sess *core.Session) {
 					wg.Done()
 					return
 				}
-				repos, err := core.GetRepositoriesFromOwner(target.Login, sess.GithubClient, sess.Options.IncludeBranches)
+				repos, err := core.GetRepositoriesFromOwner(target.Login, sess.GithubClient, sess.Options.IncludeBranches, sess.Options.IncludeForks)
 				if err != nil {
 					sess.Out.Error(" Failed to retrieve repositories from %s: %s\n", *target.Login, err)
 				}

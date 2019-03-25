@@ -26,4 +26,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - User overview
 - Repository overview
 
-[Unreleased]: https://github.com/michenriksen/gitrob/compare/v2.0.0-beta...HEAD
+## 2.1.0-beta - 2019-03-01
+### Added
+- This is a modified fork of the original
+- support for scanning all branches
+- support for inlucding forked repositories
+[Unreleased]: https://github.com/plasticuproject/gitrob/compare/v2.1.0-beta...HEAD
